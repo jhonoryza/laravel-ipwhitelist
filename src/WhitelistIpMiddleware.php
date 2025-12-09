@@ -11,7 +11,7 @@ class WhitelistIpMiddleware
 {
     public function handle(Request $request, Closure $next): Response
     {
-        $ipWhitelist = config('ipwhitelist.ip_whitelist');
+        $ipWhitelist = config('ipwhitelist.whitelist');
         $whitelist = array_map('trim', explode(',', $ipWhitelist));
 
         $clientIp = trim($request->ip());

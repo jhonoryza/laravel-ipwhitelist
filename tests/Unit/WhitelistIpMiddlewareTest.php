@@ -13,7 +13,7 @@ class WhitelistIpMiddlewareTest extends TestCase
     protected function getEnvironmentSetUp($app)
     {
         // Set up a test whitelist
-        $app['config']->set('ipwhitelist.ip_whitelist', '127.0.0.1,192.168.1.1');
+        $app['config']->set('ipwhitelist.whitelist', '127.0.0.1,192.168.1.1');
     }
 
     public function test_allows_whitelisted_ip()

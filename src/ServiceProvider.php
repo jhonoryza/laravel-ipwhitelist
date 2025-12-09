@@ -24,7 +24,7 @@ class ServiceProvider extends BaseServiceProvider
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/../config/ipwhitelist.php' => config_path('ipwhitelist.php'),
+            __DIR__ . '../config/ipwhitelist.php' => config_path('ipwhitelist.php'),
         ], 'ipwhitelist-config');
 
         $this->app['router']->aliasMiddleware('ipwhitelist', WhitelistIpMiddleware::class);
