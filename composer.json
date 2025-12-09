@@ -1,0 +1,34 @@
+{
+    "name": "jhonoryza/laravel-ipwhitelist",
+    "description": "laravel package with ip whitelist feature",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Jhonoryza\\Ipwhitelist\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jhonoryza\\Ipwhitelist\\ServiceProvider"
+            ]
+        }
+    },
+    "authors": [
+        {
+            "name": "fajar sidik priatna",
+            "email": "jardik.oryza@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.0",
+        "illuminate/support": "^8.0|^9.0|^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "laravel/pint": "^1.24"
+    }
+}
