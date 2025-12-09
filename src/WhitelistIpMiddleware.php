@@ -14,7 +14,7 @@ class WhitelistIpMiddleware
         $ipWhitelist = config('ipwhitelist.ip_whitelist');
         $whitelist = array_map('trim', explode(',', $ipWhitelist));
 
-        $clientIp = $request->ip();
+        $clientIp = trim($request->ip());
 
         if (! in_array($clientIp, $whitelist)) {
             if ($request->wantsJson()) {
